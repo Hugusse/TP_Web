@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instruments de Musique</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Panier</a></li>
+            </ul>
+        </nav>
+        <h1>Bienvenue dans notre boutique d'instruments de musique</h1>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="home" class="section">
+        <div class="hero">
+            <h2>Découvrez nos instruments de qualité</h2>
+            <p>Des guitares aux pianos, trouvez l'instrument qui vous correspond !</p>
+            <a href="#products" class="btn">Voir nos produits</a>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section id="products" class="section">
+        <h2>Nos Produits</h2>
+        <div class="product">
+            <img src="https://www.bing.com/th?id=OPEC.vVmXVRVE%2bSdfCA474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="Guitare électrique">
+            <h3>Guitare électrique</h3>
+            <p>Prix : 350€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQcU-CLxNdtOl5_tbZwpha0JB2gHiQBEcRj1AAFi6PGYveYIAmXmdMaw9_YT5GMiyjL7CZMT7v2BsGmwjMmaDjbgxj3RGzRtLIgh1wVm3yLkVPBKOtwdd872P5YVbJxKnreke7H&usqp=CAc" alt="Piano numérique">
+            <h3>Piano numérique</h3>
+            <p>Prix : 500€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRbHGywTelGdhyCcnpS2nBDCvU_QzKtDB-s-qV1oLV6eDszNon-T5mqSuH7CPgYCdWPDgm39f3PB1ptdx_aIqMhri1iJi8xjMT0R6_3e_jY7_J6UY00BkGnV6u2J72Ziu1ZaNIdSg&usqp=CAc" alt="Batterie acoustique">
+            <h3>Batterie acoustique</h3>
+            <p>Prix : 700€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Section Panier -->
+    <section id="cart" class="section">
+        <h2>Votre Panier</h2>
+        <ul>
+            <li>Guitare électrique - 350€ <button class="btn">Supprimer</button></li>
+            <li>Piano numérique - 500€ <button class="btn">Supprimer</button></li>
+        </ul>
+        <div class="total">
+            <p>Total : 850€</p>
+            <button class="btn">Passer à la caisse</button>
+        </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Instruments de Musique | Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
