@@ -1,0 +1,23 @@
+{
+  "name": "tp_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hugusse/TP_Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hugusse/TP_Web/issues"
+  },
+  "homepage": "https://github.com/Hugusse/TP_Web#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
