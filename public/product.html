@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instruments de Musique</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div id="header-container"></div>
+<script>
+    // Fonction pour charger un fichier HTML et l'insérer dans un élément
+    function loadHTML(file, containerId) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(containerId).innerHTML = data);
+    }
+
+    // Charger l'en-tête et le pied de page
+    loadHTML("header.html", "header-container");
+    loadHTML("footer.html", "footer-container");
+</script>
+    </header>
+    <!-- Section Produits -->
+    <section id="products" class="section">
+        <h2>Nos Produits</h2>
+        <div class="product">
+            <img src="guitar.jpg" alt="Guitare électrique">
+            <h3>Guitare électrique</h3>
+            <p>Prix : 350€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="piano.jpg" alt="Piano numérique">
+            <h3>Piano numérique</h3>
+            <p>Prix : 500€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="drums.jpg" alt="Batterie acoustique">
+            <h3>Batterie acoustique</h3>
+            <p>Prix : 700€</p>
+            <button class="btn">Ajouter au panier</button>
+        </div>
+    </section>
+
+</body>
+<div id="footer-container"></div>
+</html>
