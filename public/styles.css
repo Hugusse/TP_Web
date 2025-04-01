@@ -1,4 +1,4 @@
-/* Définition styles globaux */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -89,5 +89,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
-}
+    margin-top: 20px;}
+

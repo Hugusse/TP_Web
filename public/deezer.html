@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instruments de Musique</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div id="header-container"></div>
+<script>
+    // Fonction pour charger un fichier HTML et l'insérer dans un élément
+    function loadHTML(file, containerId) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(containerId).innerHTML = data);
+    }
+
+    // Charger l'en-tête et le pied de page
+    loadHTML("header.html", "header-container");
+    loadHTML("footer.html", "footer-container");
+</script>
+    </header>
+    <script src="script.js"></script>
+    <h2>Rechercher une chanson sur Deezer</h2>
+    <input type="text" id="searchInput" placeholder="Nom de l'artiste ou chanson">
+    <button onclick="search()">Rechercher</button>
+    
+    <div id="results"></div>
+
+    <script>
+        async function search() {
+            let query = document.getElementById("searchInput").value;
+            let response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${query}`);
+            let data = await response.json();
+
+            let resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "";
+
+            data.data.forEach(track => {
+                let trackElement = document.createElement("p");
+                trackElement.innerHTML = `
+                    <strong>${track.artist.name}</strong> - ${track.title} 
+                    <br>
+                    <audio controls>
+                        <source src="${track.preview}" type="audio/mp3">
+                        Votre navigateur ne supporte pas l'audio HTML5.
+                    </audio>
+                    <hr>
+                `;
+                resultsDiv.appendChild(trackElement);
+            });
+        }
+    </script>
+</body>
+<div id="footer-container"></div>
+</html>
